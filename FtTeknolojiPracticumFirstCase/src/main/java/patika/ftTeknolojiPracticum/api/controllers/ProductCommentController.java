@@ -45,10 +45,10 @@ public class ProductCommentController {
 	}
 	
 	@GetMapping("getUserIdDateBetween")
-	public DataResult<List<ProductCommentDto>> getUserIdDateBetween(@RequestParam int productId, 
+	public DataResult<List<ProductCommentDto>> getUserIdDateBetween(@RequestParam int userId, 
 			@RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date startDate,
 			@RequestParam("endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate){
-		return this.productCommentService.getUserIdDateBetween(productId, startDate, endDate);
+		return this.productCommentService.getUserIdDateBetween(userId, startDate, endDate);
 	}
 	
 	
